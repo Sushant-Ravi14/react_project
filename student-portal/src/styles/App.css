@@ -1,0 +1,215 @@
+/* ============================= */
+/* Global Reset */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* ============================= */
+/* Layout */
+/* ============================= */
+.app-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 50px 20px;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+/* ============================= */
+/* Navbar */
+/* ============================= */
+.navbar {
+  background: #0f172a;
+  padding: 16px 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar a.active {
+  color: #38bdf8;
+}
+
+.navbar a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #38bdf8;
+}
+
+/* ============================= */
+/* Headings */
+/* ============================= */
+h1, h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* Cards */
+/* ============================= */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* Form */
+/* ============================= */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  max-width: 520px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.radio-group {
+  margin-top: 18px;
+  display: flex;
+  gap: 30px;
+}
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+button {
+  margin-top: 20px;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.25);
+}
+
+/* ============================= */
+/* Error & Success */
+/* ============================= */
+.error {
+  margin-top: 4px;
+  color: #ef4444;
+  font-size: 12px;
+}
+
+.success {
+  margin-top: 10px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* ============================= */
+/* Counter Page (Enhanced) */
+/* ============================= */
+.counter-box {
+  background: white;
+  padding: 50px 40px;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 420px;
+  margin: 60px auto;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.counter-box h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  transition: 0.2s ease;
+}
+
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.counter-buttons button {
+  min-width: 100px;
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
