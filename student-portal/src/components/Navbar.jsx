@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar">
+      <NavLink to="/" className="navbar-brand">Student Portal</NavLink>
       <NavLink to="/" end>Home</NavLink>
       <NavLink to="/students">Students</NavLink>
       <NavLink to="/add">Add Student</NavLink>

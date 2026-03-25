@@ -10,16 +10,18 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Student Portal</h1>
-      <p style={{ marginBottom: "20px", color: "#64748b" }}>
-        Manage students efficiently
+    <div className="text-center" style={{ padding: "40px 0" }}>
+      <h1 className="mb-6">Welcome to the Student Portal</h1>
+      <p className="mb-8" style={{ fontSize: "1.125rem" }}>
+        A simple and elegant way to manage student records.
       </p>
 
       {students.length === 0 ? (
-        <p>No students added yet.</p>
+        <p>No students added yet. Head to "Add Student" to create one.</p>
       ) : (
-        <p>Total Students: {students.length}</p>
+        <p style={{ fontWeight: 500, color: "var(--text-main)" }}>
+          Total Students: {students.length}
+        </p>
       )}
     </div>
   );

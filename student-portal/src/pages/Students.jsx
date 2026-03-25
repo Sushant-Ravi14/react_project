@@ -37,16 +37,17 @@ function Students() {
 
   return (
     <div>
-      <div style={{ textAlign: "center", padding: "20px" }}>
+      <div className="text-center mb-8">
         <h2>Student List</h2>
+        <p>A directory of all currently enrolled students.</p>
       </div>
 
       <div className="card-container">
         {users.map((user) => (
           <div className="card" key={user.id}>
             <h3>{user.name}</h3>
-            <p>Email: {user.email}</p>
-            <p>Phone: {user.phone}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>Phone:</strong> {user.phone}</p>
           </div>
         ))}
       </div>

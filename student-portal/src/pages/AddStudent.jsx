@@ -42,63 +42,78 @@ function AddStudent() {
   };
 
   return (
-    <div>
-      <h2>Add Student</h2>
+    <div className="form-container">
+      <h2 className="text-center mb-8">Add New Student</h2>
       <form onSubmit={handleSubmit}>
 
-        <input
-          type="text"
-          placeholder="Name"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-        />
-        <p className="error">{errors.name}</p>
+        <div className="input-group">
+          <label className="input-label">Full Name</label>
+          <input
+            type="text"
+            placeholder="e.g. Jane Doe"
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+        </div>
 
-        <input
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-        />
-        <p className="error">{errors.email}</p>
+        <div className="input-group">
+          <label className="input-label">Email Address</label>
+          <input
+            type="email"
+            placeholder="jane@example.com"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
+        </div>
 
-        <input
-          type="text"
-          placeholder="Phone"
-          value={form.phone}
-          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-        />
-        <p className="error">{errors.phone}</p>
+        <div className="input-group">
+          <label className="input-label">Phone Number</label>
+          <input
+            type="text"
+            placeholder="10-digit number"
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+          />
+          {errors.phone && <p className="error">{errors.phone}</p>}
+        </div>
 
-        <div className="radio-group">
-  <label>
-    <input
-      type="radio"
-      value="Male"
-      checked={form.gender === "Male"}
-      onChange={(e) =>
-        setForm({ ...form, gender: e.target.value })
-      }
-    />
-    Male
-  </label>
+        <div className="input-group">
+          <label className="input-label">Gender</label>
+          <div className="radio-group">
+            <label className="radio-label">
+              <input
+                type="radio"
+                value="Male"
+                checked={form.gender === "Male"}
+                onChange={(e) =>
+                  setForm({ ...form, gender: e.target.value })
+                }
+              />
+              Male
+            </label>
 
-  <label>
-    <input
-      type="radio"
-      value="Female"
-      checked={form.gender === "Female"}
-      onChange={(e) =>
-        setForm({ ...form, gender: e.target.value })
-      }
-    />
-    Female
-  </label>
-</div>
-        <button type="submit">Submit</button>
+            <label className="radio-label">
+              <input
+                type="radio"
+                value="Female"
+                checked={form.gender === "Female"}
+                onChange={(e) =>
+                  setForm({ ...form, gender: e.target.value })
+                }
+              />
+              Female
+            </label>
+          </div>
+        </div>
+        
+        <button type="submit" className="primary" style={{ marginTop: "8px" }}>
+          Add Student
+        </button>
       </form>
 
-      <p className="success">{success}</p>
+      {success && <div className="success">{success}</div>}
     </div>
   );
 }
