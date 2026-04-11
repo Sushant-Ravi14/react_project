@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /students
+Disallow: /counter
+Disallow: /add
+
+Sitemap: https://student-potal-sushant-ravi.vercel.app/sitemap.xml
